@@ -4,34 +4,33 @@
   <meta charset="utf-8">
   <title>Plugins – Download</title>
 <style>
-  body { 
-    font-family: sans-serif; 
-    max-width: 800px; 
-    margin: 2em auto; 
-    line-height: 1.5; 
+  body {
+    font-family: sans-serif;
+    max-width: 800px;
+    margin: 2em auto;
+    line-height: 1.5;
   }
   h1, h2, h3 { color: #333; }
-
- /* Mỗi card co lại vừa đủ và căn giữa */
+  /* Xóa text-align trên container nếu có */
   #apps-container {
-    text-align: center; /* căn giữa cả vùng apps */
     margin-bottom: 2em;
   }
   .app {
-    display: inline-flex;         /* chuyển thành flex hàng */
-    align-items: center;          /* căn trên cùng 1 dòng */
-    gap: 1em;                     /* khoảng cách giữa tên và nút */
-    margin: 0.5em;                /* cách các card */
-    padding: 1em;                 
+    display: flex;               /* flex theo hàng */
+    justify-content: center;     /* căn giữa ngang nội dung */
+    align-items: center;         /* căn giữa dọc */
+    gap: 1em;                    /* khoảng cách giữa tên và nút */
+    max-width: 400px;            /* điều chỉnh rộng tối đa */
+    margin: 0.5em auto;          /* căn giữa card và có khoảng trên dưới */
+    padding: 1em;
     border: 1px solid #ddd;
     border-radius: 4px;
   }
   .app h3 {
-    margin: 0;                    /* bỏ margin mặc định */
+    margin: 0;
     font-size: 1.1em;
   }
   a.button {
-    /* giữ nguyên style nút */
     padding: 0.6em 1.2em;
     background: #0366d6;
     color: #fff;
@@ -39,16 +38,10 @@
     border-radius: 4px;
   }
   a.button:hover { background: #024ea2; }
-
-  code {
-    background: #f4f4f4;
-    padding: 2px 4px;
-    border-radius: 3px;
-  }
-
   section { margin-top: 2em; }
   ol { margin-left: 1.2em; }
 </style>
+
 </head>
 <body>
   <h1>Download Plugins</h1>
