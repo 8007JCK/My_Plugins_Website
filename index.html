@@ -3,17 +3,33 @@
 <head>
   <meta charset="utf-8">
   <title>Plugins – Download</title>
-  <style>
-    body { font-family: sans-serif; max-width: 800px; margin: 2em auto; line-height: 1.5; }
-    h1, h2, h3 { color: #333; }
-    .app { border: 1px solid #ddd; padding: 1em; margin-bottom: 1.5em; border-radius: 4px; }
-    .app h3 { margin-top: 0; }
-    a.button { display: inline-block; padding: 0.6em 1.2em; background: #0366d6; color: #fff; text-decoration: none; border-radius: 4px; }
-    a.button:hover { background: #024ea2; }
-    code { background: #f4f4f4; padding: 2px 4px; border-radius: 3px; }
-    section { margin-top: 2em; }
-    ol { margin-left: 1.2em; }
-  </style>
+<style>
+  body { font-family: sans-serif; max-width: 800px; margin: 2em auto; line-height: 1.5; }
+  h1, h2, h3 { color: #333; }
+  #apps-container {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;              /* nếu màn hình hẹp sẽ xuống hàng */
+  }
+  .app {
+    flex: 1;                       /* chia đều không gian */
+    min-width: 200px;              /* mỗi card ít nhất rộng 200px */
+    border: 1px solid #ddd;
+    padding: 0.8em;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* tên app bên trái, nút bên phải */
+  }
+  a.button {
+    padding: 0.5em 1em;
+    background: #0366d6;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+  }
+  a.button:hover { background: #024ea2; }
+</style>
 </head>
 <body>
   <h1>Download Plugins</h1>
