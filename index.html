@@ -12,26 +12,26 @@
   }
   h1, h2, h3 { color: #333; }
 
-  /* Giữ khoảng cách chung */
+ /* Mỗi card co lại vừa đủ và căn giữa */
   #apps-container {
+    text-align: center; /* căn giữa cả vùng apps */
     margin-bottom: 2em;
   }
-
-  /* Mỗi app co lại vừa đủ, căn giữa */
   .app {
-    display: table;
-    margin: 0.5em auto;
-    padding: 1em;
+    display: inline-flex;         /* chuyển thành flex hàng */
+    align-items: center;          /* căn trên cùng 1 dòng */
+    gap: 1em;                     /* khoảng cách giữa tên và nút */
+    margin: 0.5em;                /* cách các card */
+    padding: 1em;                 
     border: 1px solid #ddd;
     border-radius: 4px;
   }
-
   .app h3 {
-    margin: 0 0 0.5em;
+    margin: 0;                    /* bỏ margin mặc định */
+    font-size: 1.1em;
   }
-
   a.button {
-    display: inline-block;
+    /* giữ nguyên style nút */
     padding: 0.6em 1.2em;
     background: #0366d6;
     color: #fff;
