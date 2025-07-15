@@ -1,5 +1,5 @@
 <section id="terms" style="max-width:600px;margin:2em auto;font-family:sans-serif;line-height:1.5;">
-  <h2>Terms &amp; Conditions</h2>
+  <h2>1. Terms &amp; Conditions</h2>
   <ol>
     <li>
       <strong>Liability &amp; Warranty:</strong><br>
@@ -29,6 +29,32 @@
       <strong>Acceptance:</strong><br>
       Downloading or installing this software constitutes acceptance of these terms. If you do not agree, please do not use or install the program.
     </li>
+  </ol>
+</section>
+
+<section id="installation" style="max-width:600px;margin:2em auto;font-family:sans-serif;line-height:1.5;">
+  <h2>2. Installation &amp; Uninstallation</h2>
+  <h3>Installation Instructions</h3>
+  <ol>
+    <li>Click the “Download the Plugin” button below to get the ZIP package.</li>
+    <li>Unzip the downloaded file to a temporary folder on your computer.</li>
+    <li>Locate your AutoCAD (or BricsCAD) plugins/extensions folder:
+      <ul>
+        <li>Default AutoCAD path: <code>%APPDATA%\Autodesk\ApplicationPlugins\</code></li>
+        <li>Default BricsCAD path: <code>%APPDATA%\BricsCAD\Plugins\</code></li>
+      </ul>
+    </li>
+    <li>Copy the extracted <code>QCShapeNest.bundle</code> (or <code>QCShapeNest.dll</code>) into that plugins folder.</li>
+    <li>Restart AutoCAD/BricsCAD to load the new plugin.</li>
+    <li>Verify installation by running the command <code>QCSHAPENEST</code> in the CAD command line.</li>
+  </ol>
+
+  <h3>Uninstallation Instructions</h3>
+  <ol>
+    <li>Close AutoCAD/BricsCAD if it’s running.</li>
+    <li>Navigate to your plugins folder (see paths above).</li>
+    <li>Delete the <code>QCShapeNest.bundle</code> (or <code>QCShapeNest.dll</code>) file.</li>
+    <li>Restart AutoCAD/BricsCAD. The plugin will no longer load.</li>
   </ol>
 
   <p style="text-align:center;margin-top:1.5em;">
