@@ -3,45 +3,42 @@
 <head>
   <meta charset="utf-8">
   <title>Plugins – Download</title>
-<style>
-  body {
-    font-family: sans-serif;
-    max-width: 800px;
-    margin: 2em auto;
-    line-height: 1.5;
-  }
-  h1, h2, h3 { color: #333; }
-  /* Xóa text-align trên container nếu có */
-  #apps-container {
-    margin-bottom: 2em;
-  }
-  .app {
-    display: flex;               /* flex theo hàng */
-    justify-content: center;     /* căn giữa ngang nội dung */
-    align-items: center;         /* căn giữa dọc */
-    gap: 1em;                    /* khoảng cách giữa tên và nút */
-    max-width: 400px;            /* điều chỉnh rộng tối đa */
-    margin: 0.5em auto;          /* căn giữa card và có khoảng trên dưới */
-    padding: 1em;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-  }
-  .app h3 {
-    margin: 0;
-    font-size: 1.1em;
-  }
-  a.button {
-    padding: 0.6em 1.2em;
-    background: #0366d6;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 4px;
-  }
-  a.button:hover { background: #024ea2; }
-  section { margin-top: 2em; }
-  ol { margin-left: 1.2em; }
-</style>
-
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 800px;
+      margin: 2em auto;
+      line-height: 1.5;
+    }
+    h1, h2, h3 { color: #333; }
+    #apps-container { margin-bottom: 2em; }
+    .app {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1em;
+      max-width: 400px;
+      margin: 0.5em auto;
+      padding: 1em;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    .app h3 {
+      margin: 0;
+      font-size: 1.1em;
+    }
+    a.button {
+      padding: 0.6em 1.2em;
+      background: #0366d6;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+    a.button:hover { background: #024ea2; }
+    section { margin-top: 2em; }
+    ol { margin-left: 1.2em; }
+    code { background: #f4f4f4; padding: 2px 4px; border-radius: 3px; }
+  </style>
 </head>
 <body>
   <h1>Download Plugins</h1>
@@ -50,33 +47,26 @@
   <section id="terms">
     <h2>1. Terms &amp; Conditions</h2>
     <ol>
-      <li>
-        <strong>Liability &amp; Warranty:</strong><br>
-        The plugin is provided “as is” with no warranties. The user assumes all responsibility for any issues that arise and must ensure the software meets their needs and works correctly.
+      <li><strong>Liability &amp; Warranty:</strong><br>
+          The plugin is provided “as is” with no warranties. The user assumes all responsibility for any issues that arise and must ensure the software meets their needs and works correctly.
       </li>
-      <li>
-        <strong>No Refunds:</strong><br>
-        All payments or donations are final and non‑refundable.
+      <li><strong>No Refunds:</strong><br>
+          All payments or donations are final and non‑refundable.
       </li>
-      <li>
-        <strong>Proprietary Code &amp; Anti‑Tampering:</strong><br>
-        The source code is closed and may not be decompiled or modified. Built‑in protections log unauthorized access attempts.
+      <li><strong>Proprietary Code &amp; Anti‑Tampering:</strong><br>
+          The source code is closed and may not be decompiled or modified. Built‑in protections log unauthorized access attempts.
       </li>
-      <li>
-        <strong>PayPal Transactions &amp; License Management:</strong><br>
-        Transactions are processed via PayPal. Only Subscription ID and Hardware ID are stored for licensing; no other personal data is collected.
+      <li><strong>PayPal Transactions &amp; License Management:</strong><br>
+          Transactions are processed via PayPal. Only Subscription ID and Hardware ID are stored for licensing; no other personal data is collected.
       </li>
-      <li>
-        <strong>Data Privacy:</strong><br>
-        Only Subscription ID and Hardware ID are collected. Data is encrypted in transit and at rest. No other personal information is stored, shared, or sold.
+      <li><strong>Data Privacy:</strong><br>
+          Only Subscription ID and Hardware ID are collected. Data is encrypted in transit and at rest. No other personal information is stored, shared, or sold.
       </li>
-      <li>
-        <strong>Feature Integrity:</strong><br>
-        The plugin includes only the advertised features—no bundled ads or extra installers. Windows “unsigned publisher” warnings are normal and pose no risk.
+      <li><strong>Feature Integrity:</strong><br>
+          The plugin includes only the advertised features—no bundled ads or extra installers. Windows “unsigned publisher” warnings are normal and pose no risk.
       </li>
-      <li>
-        <strong>Acceptance:</strong><br>
-        Downloading or installing this plugin constitutes acceptance of these terms. If you disagree, please do not use or install the plugin.
+      <li><strong>Acceptance:</strong><br>
+          Downloading or installing this plugin constitutes acceptance of these terms. If you disagree, please do not use or install the plugin.
       </li>
     </ol>
   </section>
@@ -97,10 +87,31 @@
     </ol>
   </section>
 
+  <section id="activation">
+    <h2>3. Activation Methods</h2>
+    <ol>
+      <li>
+        <strong>Ribbon Icon:</strong><br>
+        In AutoCAD’s <em>Add‑ins</em> tab, click the plugin’s icon.  
+        <em>If your account is not active, you will be redirected to PayPal to subscribe and activate.</em>
+      </li>
+      <li>
+        <strong>Command Line:</strong><br>
+        Type <code>ActivatePlugin</code> at the AutoCAD prompt.  
+        <em>If your subscription is inactive, the same PayPal flow will launch.</em>
+      </li>
+      <li>
+        <strong>Startup Check:</strong><br>
+        The plugin automatically checks your license on AutoCAD launch.  
+        <em>If not active, you’ll be taken to PayPal to complete activation.</em>
+      </li>
+    </ol>
+  </section>
+
   <script>
     // To add or remove plugins, simply edit this array:
     const apps = [
-      { name: "App One", downloadLink: "https://github.com/chautdquang/my-plugin-site/releases/download/v1.0.0/QCShapeNest.msi" },
+      { name: "QCShapeNest", downloadLink: "https://github.com/chautdquang/my-plugin-site/releases/download/v1.0.0/QCShapeNest.msi" },
       { name: "App Two",     downloadLink: "https://github.com/chautdquang/my-plugin-site/releases/download/v2.3.0/AppTwo.msi" },
       { name: "App Three",   downloadLink: "https://github.com/chautdquang/my-plugin-site/releases/download/v1.4.2/AppThree.msi" }
     ];
@@ -111,9 +122,8 @@
       el.className = "app";
       el.innerHTML = `
         <h3>${app.name}</h3>
-        <p style="text-align:center;">
-          <a class="button" href="${app.downloadLink}" download>Download ${app.name}</a>
-        </p>`;
+        <a class="button" href="${app.downloadLink}" download>Download ${app.name}</a>
+      `;
       container.appendChild(el);
     });
   </script>
