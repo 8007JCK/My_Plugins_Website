@@ -2,23 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Plugin – Download</title>
+  <title>Plugins – Download</title>
   <style>
-    body { font-family: sans-serif; max-width: 700px; margin: 2em auto; line-height: 1.5; }
-    h1, h2 { color: #333; }
-    ol { margin-left: 1.2em; }
+    body { font-family: sans-serif; max-width: 800px; margin: 2em auto; line-height: 1.5; }
+    h1, h2, h3 { color: #333; }
+    .app { border: 1px solid #ddd; padding: 1em; margin-bottom: 1.5em; border-radius: 4px; }
+    .app h3 { margin-top: 0; }
     a.button { display: inline-block; padding: 0.6em 1.2em; background: #0366d6; color: #fff; text-decoration: none; border-radius: 4px; }
     a.button:hover { background: #024ea2; }
     code { background: #f4f4f4; padding: 2px 4px; border-radius: 3px; }
+    section { margin-top: 2em; }
+    ol { margin-left: 1.2em; }
   </style>
 </head>
 <body>
-  <h1>Download the Plugin</h1>
-  <p style="text-align:center; margin:2em 0;">
-    <a class="button" href="https://github.com/chautdquang/my-plugin-site/releases/download/v1.0.0/QCShapeNest.bak.zip" download>
-      Download the Plugin
-    </a>
-  </p>
+  <h1>Download Plugins</h1>
+  <div id="apps-container"></div>
 
   <section id="terms">
     <h2>1. Terms &amp; Conditions</h2>
@@ -56,20 +55,39 @@
 
   <section id="installation">
     <h2>2. Installation &amp; Uninstallation</h2>
-
     <h3>Installation</h3>
     <ol>
-      <li>Click the “Download the Plugin” button above to download the <code>.msi</code> installer.</li>
+      <li>Click the “Download” button for your desired plugin above to get the <code>.msi</code> installer.</li>
       <li>Run the <code>.msi</code> file and follow the setup wizard.</li>
       <li>Restart AutoCAD to load the plugin.</li>
     </ol>
-
     <h3>Uninstallation</h3>
     <ol>
       <li>Open <strong>Settings → Apps → Apps &amp; features</strong> in Windows.</li>
-      <li>Find “Plugin” in the list, click “Uninstall” and confirm.</li>
+      <li>Find the plugin in the list, click “Uninstall” and confirm.</li>
       <li>Restart AutoCAD; the plugin will no longer load.</li>
     </ol>
   </section>
+
+  <script>
+    // To add or remove plugins, simply edit this array:
+    const apps = [
+      { name: "QCShapeNest", downloadLink: "https://github.com/chautdquang/my-plugin-site/releases/download/v1.0.0/QCShapeNest.msi" },
+      { name: "App Two",     downloadLink: "https://github.com/chautdquang/my-plugin-site/releases/download/v2.3.0/AppTwo.msi" },
+      { name: "App Three",   downloadLink: "https://github.com/chautdquang/my-plugin-site/releases/download/v1.4.2/AppThree.msi" }
+    ];
+
+    const container = document.getElementById("apps-container");
+    apps.forEach(app => {
+      const el = document.createElement("div");
+      el.className = "app";
+      el.innerHTML = `
+        <h3>${app.name}</h3>
+        <p style="text-align:center;">
+          <a class="button" href="${app.downloadLink}" download>Download ${app.name}</a>
+        </p>`;
+      container.appendChild(el);
+    });
+  </script>
 </body>
 </html>
