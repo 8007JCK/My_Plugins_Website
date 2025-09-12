@@ -4,142 +4,100 @@
   <meta charset="utf-8">
   <title>QC Plugins – Download</title>
   <style>
-    body {
-      font-family: sans-serif;
-      max-width: 800px;
-      margin: 2em auto;
-      line-height: 1.5;
-    }
-    h1, h2, h3 { color: #333; }
-    #apps-container { margin-bottom: 2em; }
-    .app {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 1em;
-      max-width: 400px;
-      margin: 0.5em auto;
-      padding: 1em;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-    }
-    .app h3 {
-      margin: 0;
-      font-size: 1.1em;
-    }
-    a.button {
-      padding: 0.6em 1.2em;
-      background: #0366d6;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 4px;
-    }
-    a.button:hover { background: #024ea2; }
-    section { margin-top: 2em; }
-    ol { margin-left: 1.2em; }
+    /* Only two font sizes */
+    body { font-family: sans-serif; font-size: 16px; max-width: 800px; margin: 2em auto; line-height: 1.5; color: #222; }
+    h1, h2 { font-size: 20px; color: #333; margin: 1.2em 0 0.6em; }
+
+    /* Layout */
+    #apps-container { margin-bottom: 1.5em; }
+    .app { display: flex; justify-content: center; align-items: center; gap: 1em; max-width: 420px; margin: 0.5em auto; padding: 0.9em; border: 1px solid #ddd; border-radius: 6px; }
+    .app-title { margin: 0; }
+    .button { padding: 0.5em 1em; background: #0366d6; color: #fff; text-decoration: none; border-radius: 4px; }
+    .button:hover { background: #024ea2; }
+    section { margin-top: 1.5em; }
+    ol, ul { margin-left: 1.2em; }
     code { background: #f4f4f4; padding: 2px 4px; border-radius: 3px; }
   </style>
-
-  
 </head>
 <body>
   <h1>QC Plugins</h1>
-  <div id="apps-container"></div>
 
-    <section id="usage">
-    <h2>4. Usage Instructions</h2>
-    <h3>Usage Instructions</h3>
-    <p>Please see the attached document inside the download package.</p> 
+  <!-- 1. Download -->
+  <section id="download">
+    <h2>1. Download Plugins</h2>
+    <div id="apps-container"></div>
   </section>
 
-    <section id="installation">
-    <h2>2. Installation &amp; Uninstallation</h2>
-    <h3>Installation</h3>
+  <!-- 2. Usage -->
+  <section id="usage">
+    <h2>2. Usage Instructions</h2>
+    <p>Please see the attached document inside the download package.</p>
+  </section>
+
+  <!-- 3. Installation -->
+  <section id="installation">
+    <h2>3. Installation & Uninstallation</h2>
+    <p><strong>Installation</strong></p>
     <ol>
       <li>Click the “Download” button above.</li>
       <li>Unzip the package to get the <code>.msi</code> installer and the Usage Instructions document.</li>
       <li>Run the <code>.msi</code> file and follow the setup wizard.</li>
       <li>Restart AutoCAD to load the plugin.</li>
     </ol>
-    <h3>Uninstallation</h3>
+    <p><strong>Uninstallation</strong></p>
     <ol>
-      <li>Open <strong>Settings → Apps → Apps &amp; features</strong> in Windows.</li>
-      <li>Find the plugin in the list, click “Uninstall” and confirm.</li>
+      <li>Open <strong>Settings → Apps → Apps & features</strong> in Windows.</li>
+      <li>Find the plugin in the list, click <strong>Uninstall</strong>, and confirm.</li>
       <li>Restart AutoCAD; the plugin will no longer load.</li>
     </ol>
   </section>
 
-    <section id="activation">
-    <h2>3. Activation Methods</h2>
+  <!-- 4. Activation -->
+  <section id="activation">
+    <h2>4. Activation Methods</h2>
     <ol>
       <li>
-        <strong>Ribbon Icon:</strong><br>
-        In AutoCAD’s <em>Add-ins</em> tab, click the plugin’s icon.  
-        If your account is not active, you will be redirected to the activation page.  
-        Please contact <strong>qhchau@outlook.com</strong> for activation.
+        <strong>Ribbon Icon:</strong> In AutoCAD’s <em>Add-ins</em> tab, click the plugin’s icon. If your account is not active, you will be redirected to the activation page. Please contact <strong>qhchau@outlook.com</strong> for activation.
       </li>
-      
       <li>
-        <strong>Command Line:</strong><br>
-      Type the plugin command (e.g., <code>QCShapeNest</code>) at the AutoCAD prompt.  
-If your subscription is inactive, you will be redirected to the activation process.
+        <strong>Command Line:</strong> Type the plugin command (e.g., <code>QCShapeNest</code>) at the AutoCAD prompt. If your subscription is inactive, you will be redirected to the activation process.
       </li>
-
+      <li>
+        <strong>Startup Check:</strong> The plugin may verify your license on AutoCAD launch and redirect you to activation if inactive.
+      </li>
     </ol>
-  </section
+  </section>
 
-
-      
-  <section id="Subscribe Plan">
+  <!-- 5. Subscribe Plan -->
+  <section id="plans">
     <h2>5. Subscribe Plan</h2>
-    <h3>Subscribe Plan</h3>
     <ul>
       <li>Monthly: <strong>USD 3.00 / month</strong></li>
       <li>Yearly: <strong>USD 20.00 / year</strong></li>
-      <li>Unlimited Use License: USD 60.00 (covers current major version, subject to future updates at publisher’s discretion)</strong></li>
+      <li>Unlimited Use License: <strong>USD 60.00</strong> (covers current major version; future updates at publisher’s discretion)</li>
+      <li>Payments via PayPal (<strong>qhchau@outlook.com</strong>)</li>
     </ul>
   </section>
 
-  
-
+  <!-- 6. Terms -->
   <section id="terms">
-    <h2>1. Terms &amp; Conditions</h2>
+    <h2>6. Terms & Conditions</h2>
     <ol>
-      <li><strong>Liability &amp; Warranty:</strong><br>
-         The plugin is provided “as is” with no warranties.  
-    This plugin is a hobby project for casual use only and is not intended for critical or professional workflows.  
-    The user assumes all responsibility for any issues that arise and must ensure the software meets their needs and works correctly.
-      </li>
-      <li><strong>No Refunds:</strong><br>
-          All payments or donations are final and non-refundable.
-      </li>
-      <li><strong>Proprietary Code &amp; Anti-Tampering:</strong><br>
-          The source code is closed and may not be decompiled or modified. Built-in protections log unauthorized access attempts.
-      </li>
-      <li><strong>PayPal Transactions &amp; License Management:</strong><br>
-          Transactions are processed via PayPal (<strong>qhchau@outlook.com</strong>). Only a User ID generated from your PC hardware ID is stored for licensing; no other personal data is collected.
-      </li>
-      <li><strong>Data Privacy:</strong><br>
-          Only the User ID generated from your PC hardware ID is collected. Data is encrypted in transit and at rest. No other personal information is stored, shared, or sold.
-      </li>
-      <li><strong>Feature Integrity:</strong><br>
-          The plugin includes only the advertised features—no bundled ads or extra installers. Windows “unsigned publisher” warnings are normal and pose no risk.
-      </li>
-      <li><strong>Acceptance:</strong><br>
-          Downloading or installing this plugin constitutes acceptance of these terms. If you disagree, please do not use or install the plugin.
-      </li>
+      <li><strong>Liability & Warranty:</strong> The plugin is provided “as is” with no warranties. This is a hobby project for casual use only and is not intended for critical or professional workflows. Users are responsible for verifying suitability and correct operation.</li>
+      <li><strong>No Refunds:</strong> All payments or donations are final and non-refundable.</li>
+      <li><strong>Proprietary Code & Anti-Tampering:</strong> The source code is closed and may not be decompiled or modified. Protections may log unauthorized access attempts.</li>
+      <li><strong>PayPal & License:</strong> Payments via PayPal (<strong>qhchau@outlook.com</strong>). Only a User ID derived from your PC hardware ID is stored for licensing; no other personal data is collected.</li>
+      <li><strong>Data Privacy:</strong> Only the User ID derived from your PC hardware ID is collected. Data is encrypted in transit and at rest. No other personal information is stored, shared, or sold.</li>
+      <li><strong>Feature Integrity:</strong> Only advertised features are included. No bundled ads or extra installers. Windows “unsigned publisher” warnings can appear and are expected.</li>
+      <li><strong>Acceptance:</strong> Downloading or installing the plugin means you accept these terms. If you disagree, do not use or install the plugin.</li>
     </ol>
   </section>
 
-
-
-
-  
   <script>
     const apps = [
       { name: "QC.ShapeNest", repo: "chautdquang/My_Plugins_Website", asset: "QC.ShapeNest_2025.09.11.msi" },
-      { name: "App Two",     repo: "chautdquang/My_Plugins_Website", asset: "AppTwo.msi" },
-      { name: "App Three",   repo: "chautdquang/My_Plugins_Website", asset: "AppThree.msi" }
+      { name: "App Two",      repo: "chautdquang/My_Plugins_Website", asset: "AppTwo.msi" },
+      { name: "App Three",    repo: "chautdquang/My_Plugins_Website", asset: "AppThree.msi" }
     ];
 
     const container = document.getElementById("apps-container");
@@ -148,7 +106,7 @@ If your subscription is inactive, you will be redirected to the activation proce
       const el = document.createElement("div");
       el.className = "app";
       el.innerHTML = `
-        <h3>${app.name}</h3>
+        <p class="app-title">${app.name}</p>
         <a class="button" href="${url}" download>Download ${app.name}</a>
       `;
       container.appendChild(el);
