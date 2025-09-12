@@ -119,10 +119,8 @@ apps.forEach(app => {
   const url = `https://github.com/${app.repo}/releases/latest/download/${app.asset}`;
   const el = document.createElement("div");
   el.className = "app";
-  el.innerHTML = `
-    <h3>${app.name}</h3>
-    <a class="button" href="${url}" download>Download ${app.name}</a>
-  `;
+  el.innerHTML = `<h3>${app.name}</h3>
+                  <a class="button" href="${url}" download>Download ${app.name}</a>`;
   container.appendChild(el);
 });
 
