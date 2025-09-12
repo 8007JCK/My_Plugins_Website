@@ -108,22 +108,26 @@
     </ol>
   </section>
 
-const apps = [
-  { name: "QCShapeNest", repo: "chautdquang/My_Plugins_Website", asset: "QC.ShapeNest_2025.09.11.msi" },
-  { name: "App Two",     repo: "chautdquang/My_Plugins_Website", asset: "AppTwo.msi" },
-  { name: "App Three",   repo: "chautdquang/My_Plugins_Website", asset: "AppThree.msi" }
-];
+<!-- SCRIPT PHẢI NẰM TRONG <script> -->
+  <script>
+    const apps = [
+      { name: "QCShapeNest", repo: "chautdquang/My_Plugins_Website", asset: "QC.ShapeNest_2025.09.11.msi" },
+      { name: "App Two",     repo: "chautdquang/My_Plugins_Website", asset: "AppTwo.msi" },
+      { name: "App Three",   repo: "chautdquang/My_Plugins_Website", asset: "AppThree.msi" }
+    ];
 
-const container = document.getElementById("apps-container");
-apps.forEach(app => {
-  const url = `https://github.com/${app.repo}/releases/latest/download/${app.asset}`;
-  const el = document.createElement("div");
-  el.className = "app";
-  el.innerHTML = `<h3>${app.name}</h3>
-                  <a class="button" href="${url}" download>Download ${app.name}</a>`;
-  container.appendChild(el);
-});
-
+    const container = document.getElementById("apps-container");
+    apps.forEach(app => {
+      const url = `https://github.com/${app.repo}/releases/latest/download/${app.asset}`;
+      const el = document.createElement("div");
+      el.className = "app";
+      el.innerHTML = `
+        <h3>${app.name}</h3>
+        <a class="button" href="${url}" download>Download ${app.name}</a>
+      `;
+      container.appendChild(el);
+    });
+  </script>
 
 
 
