@@ -117,7 +117,7 @@ const apps = [
 
 const container = document.getElementById("apps-container");
 apps.forEach(app => {
-  const url = `https://github.com/${app.repo}/releases/latest/download/${app.asset}`;
+  const url = `https://github.com/${app.repo}/releases/download/latest/${app.asset}`;
   const el = document.createElement("div");
   el.className = "app";
   el.innerHTML = `
