@@ -108,7 +108,6 @@
     </ol>
   </section>
 
-<script>
 const apps = [
   { name: "QCShapeNest", repo: "chautdquang/my-plugin-site", asset: "QC.ShapeNest_2025.09.11.msi" },
   { name: "App Two",     repo: "chautdquang/my-plugin-site", asset: "AppTwo.msi" },
@@ -117,7 +116,7 @@ const apps = [
 
 const container = document.getElementById("apps-container");
 apps.forEach(app => {
-  const url = `https://github.com/${app.repo}/releases/download/latest/${app.asset}`;
+  const url = `https://github.com/${app.repo}/releases/latest/download/${app.asset}`;
   const el = document.createElement("div");
   el.className = "app";
   el.innerHTML = `
@@ -126,7 +125,7 @@ apps.forEach(app => {
   `;
   container.appendChild(el);
 });
-</script>
+
 
 
 
