@@ -110,22 +110,24 @@
 
 <script>
 const apps = [
-  { name: "QCShapeNest", downloadLink: "https://github.com/chautdquang/my-plugin-site/releases/latest/download/QC.ShapeNest_2025.09.11.msi" },
-  { name: "App Two",     downloadLink: "https://github.com/chautdquang/my-plugin-site/releases/latest/download/AppTwo.msi" },
-  { name: "App Three",   downloadLink: "https://github.com/chautdquang/my-plugin-site/releases/latest/download/AppThree.msi" }
+  { name: "QCShapeNest", repo: "chautdquang/my-plugin-site", asset: "QC.ShapeNest_2025.09.11.msi" },
+  { name: "App Two",     repo: "chautdquang/my-plugin-site", asset: "AppTwo.msi" },
+  { name: "App Three",   repo: "chautdquang/my-plugin-site", asset: "AppThree.msi" }
 ];
 
 const container = document.getElementById("apps-container");
 apps.forEach(app => {
+  const url = `https://github.com/${app.repo}/releases/latest/download/${app.asset}`;
   const el = document.createElement("div");
   el.className = "app";
   el.innerHTML = `
     <h3>${app.name}</h3>
-    <a class="button" href="${app.downloadLink}" download>Download ${app.name}</a>
+    <a class="button" href="${url}" download>Download ${app.name}</a>
   `;
   container.appendChild(el);
 });
 </script>
+
 
 
 </body>
