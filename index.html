@@ -103,24 +103,42 @@
     </ol>
   </section>
 
-  <script>
-    const apps = [
-      { name: "QC ShapeNest (CAD 2020-2026)", repo: "chautdquang/My_Plugins_Website", asset: "_Pack.ShapeNest.rar" },
-      { name: "QC Object Info Extractor (CAD 2020-2026)",      repo: "chautdquang/My_Plugins_Website", asset: "_Pack.ObjectInfo.rar" },
-      { name: "QC Layout Creator (CAD 2020-2026)",    repo: "chautdquang/My_Plugins_Website", asset: "_Pack.LayoutCreator.rar" }
-    ];
+<script>
+  const apps = [
+    { 
+      name: "QC ShapeNest (CAD 2020-2026)", 
+      repo: "chautdquang/My_Plugins_Website", 
+      tag: "ShapeNest_v1.0.0", 
+      asset: "_Pack.ShapeNest.rar" 
+    },
+    { 
+      name: "QC Object Info Extractor (CAD 2020-2026)", 
+      repo: "chautdquang/My_Plugins_Website", 
+      tag: "ObjectInfo_v1.0.0", 
+      asset: "_Pack.ObjectInfo.rar" 
+    },
+    { 
+      name: "QC Layout Creator (CAD 2020-2026)", 
+      repo: "chautdquang/My_Plugins_Website", 
+      tag: "LayoutCreator_v1.0.0", 
+      asset: "_Pack.LayoutCreator.rar" 
+    }
+  ];
 
-    const container = document.getElementById("apps-container");
-    apps.forEach(app => {
-      const url = `https://github.com/${app.repo}/releases/latest/download/${app.asset}`;
-      const el = document.createElement("div");
-      el.className = "app";
-      el.innerHTML = `
-        <p class="app-title">${app.name}</p>
-        <a class="button" href="${url}" download>Download ${app.name}</a>
-      `;
-      container.appendChild(el);
-    });
-  </script>
+  const container = document.getElementById("apps-container");
+  apps.forEach(app => {
+    const url = `https://github.com/${app.repo}/releases/download/${app.tag}/${app.asset}`;
+    const el = document.createElement("div");
+    el.className = "app";
+    el.innerHTML = `
+      <p class="app-title">${app.name}</p>
+      <a class="button" href="${url}" download>Download ${app.name}</a>
+    `;
+    container.appendChild(el);
+  });
+</script>
+
+
+  
 </body>
 </html>
