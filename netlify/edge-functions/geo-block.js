@@ -2,7 +2,7 @@ export default async (request, context) => {
   const country = context.geo.country?.code || "ZZ";
   if (country !== "US") {
     return new Response(
-      "Service available only in the United States.",
+     "Thank you for visiting. This plugin is currently offered only within the United States while we review regional availability.",
       { status: 451, headers: { "content-type": "text/plain" } }
     );
   }
