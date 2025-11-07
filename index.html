@@ -192,5 +192,25 @@
 
 
   
+<!-- Bộ đếm lượt truy cập -->
+<div id="visit-counter" style="margin-top:2em; font-weight:bold;"></div>
+
+<script>
+  const ENDPOINT = https://script.google.com/macros/s/AKfycbxgQOTaMU0FJ0ETRSbQGE3CrnYhkl2OOu5UHeT0lCFohTLJ_q3t7MxP70WwvT-cvYDnwQ/exec"; // thay XXX bằng link thật của Apps Script
+  fetch(ENDPOINT)
+    .then(r => r.json())
+    .then(j => {
+      document.getElementById('visit-counter').innerText =
+        `Total visits: ${j.count}`;
+    })
+    .catch(e => {
+      document.getElementById('visit-counter').innerText =
+        'Visitor counter unavailable';
+    });
+</script>
+
+  <!-- Bộ đếm lượt truy cập -->
+
+  
 </body>
 </html>
